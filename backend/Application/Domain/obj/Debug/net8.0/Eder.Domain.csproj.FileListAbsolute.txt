@@ -1,0 +1,12 @@
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\bin\Debug\net8.0\Eder.Domain.deps.json
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\bin\Debug\net8.0\Eder.Domain.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\bin\Debug\net8.0\Eder.Domain.pdb
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.AssemblyInfoInputs.cache
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.AssemblyInfo.cs
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.csproj.CoreCompileInputs.cache
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.sourcelink.json
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\refint\Eder.Domain.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.pdb
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\ref\Eder.Domain.dll

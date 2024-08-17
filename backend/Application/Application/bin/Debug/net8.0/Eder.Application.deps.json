@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Eder.Application/1.0.0": {
+        "dependencies": {
+          "Eder.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Eder.Application.dll": {}
+        }
+      },
+      "Eder.Domain/1.0.0": {
+        "runtime": {
+          "Eder.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Eder.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Eder.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

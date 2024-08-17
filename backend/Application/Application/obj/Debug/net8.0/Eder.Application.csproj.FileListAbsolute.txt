@@ -1,0 +1,16 @@
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\bin\Debug\net8.0\Eder.Application.deps.json
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\bin\Debug\net8.0\Eder.Application.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\bin\Debug\net8.0\Eder.Application.pdb
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\bin\Debug\net8.0\Eder.Domain.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\bin\Debug\net8.0\Eder.Domain.pdb
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.csproj.AssemblyReference.cache
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.AssemblyInfoInputs.cache
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.AssemblyInfo.cs
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.csproj.CoreCompileInputs.cache
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.sourcelink.json
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.App.BF7784A2.Up2Date
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\refint\Eder.Application.dll
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\Eder.Application.pdb
+C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Application\obj\Debug\net8.0\ref\Eder.Application.dll
