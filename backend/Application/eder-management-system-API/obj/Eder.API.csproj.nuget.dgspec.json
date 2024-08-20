@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj": {}
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
+        "projectUniqueName": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
         "projectName": "Eder.Application",
-        "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
+        "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
         "packagesPath": "C:\\Users\\JohnHacker1998\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\obj\\",
+        "outputPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
-                "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj"
+              "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
+                "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj"
               }
             }
           }
@@ -69,18 +69,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
         "projectName": "Eder.Domain",
-        "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+        "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
         "packagesPath": "C:\\Users\\JohnHacker1998\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -118,6 +118,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -134,18 +140,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj": {
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
+        "projectUniqueName": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
         "projectName": "Eder.API",
-        "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
+        "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
         "packagesPath": "C:\\Users\\JohnHacker1998\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\obj\\",
+        "outputPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -167,11 +173,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
-                "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj"
+              "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
+                "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj"
               },
-              "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj"
+              "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj"
               }
             }
           }
@@ -221,18 +227,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj": {
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
         "projectName": "Eder.Infrastructure",
-        "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\JohnHacker1998\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -254,11 +260,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
-                "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj"
+              "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj": {
+                "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj"
               },
-              "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
-                "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj"
+              "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
+                "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj"
               }
             }
           }
@@ -288,6 +294,10 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -295,6 +305,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [
@@ -313,7 +327,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

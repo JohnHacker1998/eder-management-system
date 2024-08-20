@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Eder.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a2679563384575e9bf217e195a067bf15c98ba1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+080e67d60bb44b7e3209a9f4baf819ec56e0da1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eder.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eder.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

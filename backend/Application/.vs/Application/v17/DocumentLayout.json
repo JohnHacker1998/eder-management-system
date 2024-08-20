@@ -3,20 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\utility\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\utility\\jwt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\configuration\\jwtconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\configuration\\jwtconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\extensions\\infrastructureextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\extensions\\infrastructureextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\eder-management-system-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|solutionrelative:eder-management-system-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\eder-management-system-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|solutionrelative:eder-management-system-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\eder-management-system-api\\eder.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D266C035-7FFC-4580-9752-3848CDED0B71}|eder-management-system-API\\Eder.API.csproj|solutionrelative:eder-management-system-api\\eder.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\common\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\common\\enums\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\domain\\eder.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|solutionrelative:domain\\eder.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\eder.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\eder.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7329EC56-1B7A-4421-AF14-4AF08EA0C1ED}|Application\\Eder.Application.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\application\\eder.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7329EC56-1B7A-4421-AF14-4AF08EA0C1ED}|Application\\Eder.Application.csproj|solutionrelative:application\\eder.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\domain\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|solutionrelative:domain\\irepositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7329EC56-1B7A-4421-AF14-4AF08EA0C1ED}|Application\\Application.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7329EC56-1B7A-4421-AF14-4AF08EA0C1ED}|Application\\Application.csproj|solutionrelative:application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\domain\\common\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{900E1B4B-A3D6-47BD-9BCB-5F074B5ACB49}|Domain\\Eder.Domain.csproj|solutionrelative:domain\\common\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|c:\\users\\johnhacker1998\\source\\repos\\eder-management-system\\backend\\application\\infrastructure\\migrations\\20240819081714_added identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{650C05E9-3B39-420C-8C26-EBEDB49C7CD7}|Infrastructure\\Eder.Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240819081714_added identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +78,228 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JWTConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Configuration\\JWTConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Configuration\\JWTConfiguration.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Configuration\\JWTConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Configuration\\JWTConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T09:08:47.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T07:48:38.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InfrastructureExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Extensions\\InfrastructureExtensions.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Extensions\\InfrastructureExtensions.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Extensions\\InfrastructureExtensions.cs",
+              "RelativeToolTip": "Infrastructure\\Extensions\\InfrastructureExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T07:51:01.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:25:58.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\appsettings.json",
+              "RelativeDocumentMoniker": "eder-management-system-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\appsettings.json",
+              "RelativeToolTip": "eder-management-system-API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-20T07:46:17.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Eder.API",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
+              "RelativeDocumentMoniker": "eder-management-system-API\\Eder.API.csproj",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Eder.API.csproj",
+              "RelativeToolTip": "eder-management-system-API\\Eder.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-20T08:43:18.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Common\\Enums\\Enums.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Common\\Enums\\Enums.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Common\\Enums\\Enums.cs",
+              "RelativeToolTip": "Infrastructure\\Common\\Enums\\Enums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:29:41.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JWT.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Utility\\JWT.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Utility\\JWT.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Utility\\JWT.cs",
+              "RelativeToolTip": "Infrastructure\\Utility\\JWT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:44:27.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:43:07.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Program.cs",
+              "RelativeDocumentMoniker": "eder-management-system-API\\Program.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\eder-management-system-API\\Program.cs",
+              "RelativeToolTip": "eder-management-system-API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T08:14:55.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Common\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Common\\GenericRepository.cs",
+              "RelativeToolTip": "Domain\\Common\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:44:56.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\IRepositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\IRepositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\IRepositories\\IUserRepository.cs",
+              "RelativeToolTip": "Domain\\IRepositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T11:40:19.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Eder.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Eder.Domain.csproj",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+              "RelativeToolTip": "Domain\\Eder.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-19T07:44:06.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Eder.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Infrastructure\\Eder.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Eder.Infrastructure.csproj",
               "RelativeToolTip": "Infrastructure\\Eder.Infrastructure.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-16T20:08:25.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Eder.Application.csproj",
-              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
-              "RelativeDocumentMoniker": "Application\\Eder.Application.csproj",
-              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Eder.Application.csproj",
-              "RelativeToolTip": "Application\\Eder.Application.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-16T20:08:06.127Z",
+              "DocumentIndex": 16,
+              "Title": "20240819081714_Added identity.cs",
+              "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Migrations\\20240819081714_Added identity.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240819081714_Added identity.cs",
+              "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Migrations\\20240819081714_Added identity.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240819081714_Added identity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T08:17:15.133Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Class1.cs",
               "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Infrastructure\\Class1.cs",
               "RelativeToolTip": "Infrastructure\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:06:36.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T20:06:36.211Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Class1.cs",
               "RelativeDocumentMoniker": "Application\\Class1.cs",
               "ToolTip": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Application\\Class1.cs",
               "RelativeToolTip": "Application\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T20:05:42.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T20:05:42.5Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

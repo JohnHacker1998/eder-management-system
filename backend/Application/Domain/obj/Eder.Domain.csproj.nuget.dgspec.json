@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {}
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
+    "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
         "projectName": "Eder.Domain",
-        "projectPath": "C:\\Users\\JohnHacker1998\\Source\\Repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
+        "projectPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\Eder.Domain.csproj",
         "packagesPath": "C:\\Users\\JohnHacker1998\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\JohnHacker1998\\source\\repos\\eder-management-system\\backend\\Application\\Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

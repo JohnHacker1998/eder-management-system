@@ -10,3 +10,4 @@ C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\
 C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\refint\Eder.Domain.dll
 C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.pdb
 C:\Users\JohnHacker1998\Source\Repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\ref\Eder.Domain.dll
+C:\Users\JohnHacker1998\source\repos\eder-management-system\backend\Application\Domain\obj\Debug\net8.0\Eder.Domain.csproj.AssemblyReference.cache
