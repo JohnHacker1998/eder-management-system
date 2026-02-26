@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Eder.API.props" />
-</Project>
