@@ -1,7 +1,12 @@
 ﻿namespace SharedKernel;
 
-public abstract class Entity
+public abstract class Entity<T>
 {
+    public string Id {get; set;}
+    public DateTime CreatedAt {get; set;}
+    public DateTime UpdatedAt {get; set;}
+    public DateTime DeletedAt {get; set;}
+
     private readonly List<IDomainEvent> _domainEvents = [];
 
     public List<IDomainEvent> DomainEvents => [.. _domainEvents];
