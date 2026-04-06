@@ -1,0 +1,6 @@
+@eder_web_api_HostAddress = http://localhost:5170
+
+GET {{eder_web_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
