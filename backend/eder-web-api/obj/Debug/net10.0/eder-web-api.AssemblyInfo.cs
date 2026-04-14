@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eder-web-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+698a4311e8dc3287f54fb344b12f39cfa048ed8c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71c7b20c400ae29d64bc8f977ab26cefbabbc4a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("eder-web-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eder-web-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

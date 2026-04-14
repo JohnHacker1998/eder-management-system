@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QTQVr9cOtbY=",
+  "dgSpecHash": "325tJ//8np0=",
   "success": true,
   "projectFilePath": "/Users/johnhacker1998/Documents/eder/eder-management-system/backend/eder-web-api/eder-web-api.csproj",
   "expectedPackageFiles": [
     "/Users/johnhacker1998/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/johnhacker1998/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/10.0.0/microsoft.aspnetcore.identity.entityframeworkcore.10.0.0.nupkg.sha512",
     "/Users/johnhacker1998/.nuget/packages/microsoft.aspnetcore.openapi/10.0.3/microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
     "/Users/johnhacker1998/.nuget/packages/microsoft.build.framework/18.0.2/microsoft.build.framework.18.0.2.nupkg.sha512",
     "/Users/johnhacker1998/.nuget/packages/microsoft.codeanalysis.analyzers/3.11.0/microsoft.codeanalysis.analyzers.3.11.0.nupkg.sha512",
