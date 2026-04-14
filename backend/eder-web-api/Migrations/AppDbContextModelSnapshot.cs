@@ -124,6 +124,34 @@ namespace eder_web_api.Migrations
 
                     b.ToTable("user_logins", (string)null);
                 });
+
+            modelBuilder.Entity("eder_web_api.modules.auth.entities.UserRole", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("text")
+                        .HasColumnName("concurrency_stamp");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<string>("NormalizedName")
+                        .HasColumnType("text")
+                        .HasColumnName("normalized_name");
+
+                    b.Property<int>("RoleType")
+                        .HasColumnType("integer")
+                        .HasColumnName("role_type");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("user_roles", (string)null);
+                });
 #pragma warning restore 612, 618
         }
     }

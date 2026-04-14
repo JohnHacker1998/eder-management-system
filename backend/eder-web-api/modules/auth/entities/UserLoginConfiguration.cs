@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eder_web_api.modules.auth.entities
 {
-    public class UserLoginConfiguration:IEntityTypeConfiguration<UserLogin>
+    public class UserLoginConfiguration : IEntityTypeConfiguration<UserLogin>
     {
         public void Configure(EntityTypeBuilder<UserLogin> builder)
         {

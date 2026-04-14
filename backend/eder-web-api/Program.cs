@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using eder_web_api.Infrastructure.Persistence;
+
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,7 +17,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.UseSwaggerUI(FileOptions =>
     {
-        FileOptions.SwaggerEndpoint("/openapi/v1.json","API v1");
+        FileOptions.SwaggerEndpoint("/openapi/v1.json", "API v1");
     });
 }
 
