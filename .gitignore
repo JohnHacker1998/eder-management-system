@@ -1,0 +1,63 @@
+# === Visual Studio / VS Code ===
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# === Build output ===
+bin/
+obj/
+out/
+
+# === Rider / JetBrains ===
+.idea/
+
+# === NuGet ===
+*.nupkg
+packages/
+.nuget/
+
+# === EF Core Migrations (optional) ===
+# If you want to track migrations, comment out the next line
+**/Migrations/
+
+# === Logs ===
+*.log
+logs/
+
+# === Temporary files ===
+*.tmp
+*.temp
+*.swp
+
+# === OS-specific ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# === Docker ===
+docker-compose.override.yml
+docker-compose.override.*.yml
+*.env
+*.env.local
+
+# Ignore Postgres data volume (if mounted locally)
+pgdata/
+
+# === Secrets ===
+secrets.json
+*.key
+*.pem
+*.pfx

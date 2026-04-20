@@ -1,0 +1,21 @@
+root = true
+
+[*.cs]
+
+# Indentation
+indent_style = space
+indent_size = 4
+
+# New lines
+insert_final_newline = true
+
+# C# specific rules
+csharp_new_line_before_open_brace = all
+csharp_indent_case_contents = true
+
+# var preferences
+csharp_style_var_for_built_in_types = true
+csharp_style_var_when_type_is_apparent = true
+
+# expression body
+csharp_style_expression_bodied_methods = true
