@@ -10,6 +10,11 @@ namespace eder_web_api.modules.account.entities
             builder.ToTable("accounts");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
+            builder
+                .HasMany(x => x.Users)
+                .WithOne(x => x.Account)
+                .HasForeignKey(x => x.AccountId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
