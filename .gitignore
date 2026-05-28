@@ -55,6 +55,7 @@ pgdata/
 
 # === Secrets ===
 secrets.json
+appsettings.json
 *.key
 *.pem
 *.pfx

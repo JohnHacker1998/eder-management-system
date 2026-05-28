@@ -1,13 +1,22 @@
 using eder_web_api.Infrastructure.Persistence;
-
+using eder_web_api.modules.auth.entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
+builder
+    .Services.AddIdentity<UserLogin, UserRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 
@@ -24,4 +33,3 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.Run();
-

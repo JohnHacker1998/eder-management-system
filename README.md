@@ -64,26 +64,26 @@ Run all commands from:
 cd /Users/johnhacker1998/Documents/eder/eder-management-system
 ```
 
-1) Start local infrastructure (optional but recommended):
+1. Start local infrastructure (optional but recommended):
 
 ```bash
 docker compose -f docker-compose.local.yml up -d
 ```
 
-1) Restore and build:
+1. Restore and build:
 
 ```bash
 dotnet restore eder-management-system.sln
 dotnet build eder-management-system.sln
 ```
 
-1) Apply migrations:
+1. Apply migrations:
 
 ```bash
 dotnet ef database update --context AppDbContext --project eder-web-api.csproj
 ```
 
-1) Run API:
+1. Run API:
 
 ```bash
 dotnet run --project eder-web-api.csproj --launch-profile http
