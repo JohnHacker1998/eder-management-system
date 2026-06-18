@@ -19,9 +19,6 @@ out/
 packages/
 .nuget/
 
-# === EF Core Migrations (optional) ===
-# If you want to track migrations, comment out the next line
-**/Migrations/
 
 # === Logs ===
 *.log
@@ -58,6 +55,7 @@ pgdata/
 
 # === Secrets ===
 secrets.json
+appsettings.json
 *.key
 *.pem
 *.pfx
