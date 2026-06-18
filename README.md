@@ -1,163 +1,252 @@
-# Eder Management System (Backend)
+# Eder Management System
 
-Backend-only ASP.NET Core Web API project for Eder Management System.
+Backend ASP.NET Core Web API for tenant and account management with ASP.NET Core Identity-based authentication. Built with clean architecture on **.NET 10**, **PostgreSQL**, and **Entity Framework Core**.
 
-This repository currently contains a single .NET API project with Entity Framework Core and PostgreSQL integration. The frontend is no longer part of this repository.
+---
 
-## Current Status
+## Architecture
 
-- Project is scaffolded and runnable.
-- Database context and entity mappings are in place.
-- OpenAPI document and Swagger UI are available in Development mode.
-- No business API endpoints are mapped yet (no controller/minimal route mappings in `Program.cs`).
+```mermaid
+flowchart TB
+  Api[Eder.Api]
+  App[Eder.Application]
+  Domain[Eder.Domain]
+  Infra[Eder.Infrastructure]
 
-## Tech Stack
+  Api --> App
+  Api --> Infra
+  App --> Domain
+  Infra --> Domain
+```
 
-- .NET / ASP.NET Core: `net10.0`
-- ORM: Entity Framework Core 10
-- Database provider: PostgreSQL via Npgsql
-- Auth-related packages: ASP.NET Core Identity EF Core package is referenced
-- API docs: Microsoft OpenAPI + Swashbuckle UI
-- Local infra (optional): Docker Compose for PostgreSQL + Redis
+| Layer | Project | Responsibility |
+|---|---|---|
+| Presentation | `Eder.Api` | HTTP host, OpenAPI/Swagger, DI bootstrap |
+| Application | `Eder.Application` | DTOs, validators, use cases |
+| Domain | `Eder.Domain` | Entities, enums, domain interfaces |
+| Infrastructure | `Eder.Infrastructure` | EF Core, Identity, JWT, persistence |
 
-## Project Structure
+Dependency flow: **Api → Application → Domain** and **Infrastructure → Domain**. The API references Infrastructure only for composition root wiring (`AddInfrastructure()` in `Program.cs`).
+
+---
+
+## Repository layout
 
 ```text
 .
-├── Program.cs
-├── eder-web-api.csproj
-├── eder-management-system.sln
-├── appsettings.json
-├── appsettings.Development.json
-├── Infrastructure/
-│   └── Persistence/
-│       └── AppDbContext.cs
-├── modules/
-│   ├── auth/
-│   └── account/
-├── common/
-├── Migrations/
-├── Properties/
-│   └── launchSettings.json
+├── Eder.Api/                    # Program.cs, appsettings, launch profiles
+├── Eder.Application/
+│   └── Auth/                    # Dtos, Validators
+├── Eder.Domain/
+│   ├── Entities/                # Account, User, UserLogin, UserRole
+│   └── Enums/                   # RoleName, RoleType
+├── Eder.Infrastructure/
+│   ├── Identity/                # ApplicationUser, ApplicationRole, JwtService
+│   ├── Configuration/           # JwtOptions
+│   └── Persistence/             # AppDbContext, EF configs, Migrations
+├── Eder.slnx
 ├── docker-compose.local.yml
 └── dotnet-tools.json
 ```
 
+---
+
+## Tech stack
+
+- ASP.NET Core 10 (`net10.0`)
+- Entity Framework Core 10 + Npgsql (PostgreSQL)
+- ASP.NET Core Identity
+- FluentValidation
+- Microsoft OpenAPI + Swashbuckle UI
+- JWT Bearer (package referenced; middleware not wired yet)
+
+---
+
 ## Prerequisites
 
-- .NET 10 SDK
-- Docker (optional, for local Postgres/Redis via Compose)
-- PostgreSQL client tools (optional, helpful for DB checks)
-- `dotnet-ef` CLI tool (if you plan to run migrations manually)
-
-Install EF CLI (if not already installed):
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Docker](https://www.docker.com/) (optional, for local Postgres and Redis)
+- [dotnet EF Core tools](https://learn.microsoft.com/en-us/ef/core/cli/dotnet) (for migrations)
 
 ```bash
 dotnet tool install --global dotnet-ef
 ```
 
-## Quick Start
+Redis is included in `docker-compose.local.yml` but is not used by the application yet.
 
-Run all commands from:
+---
+
+## Getting started
+
+### 1. Clone and enter the repository
 
 ```bash
-cd /Users/johnhacker1998/Documents/eder/eder-management-system
+git clone <repository-url>
+cd eder-management-system
 ```
 
-1. Start local infrastructure (optional but recommended):
+### 2. Start local infrastructure
 
 ```bash
 docker compose -f docker-compose.local.yml up -d
 ```
 
-1. Restore and build:
+### 3. Create the application database
+
+Docker Compose creates a default `postgres` database. The app expects `eder_db`:
 
 ```bash
-dotnet restore eder-management-system.sln
-dotnet build eder-management-system.sln
+docker exec -it $(docker ps -qf name=postgres) psql -U postgres -c "CREATE DATABASE eder_db;"
 ```
 
-1. Apply migrations:
+### 4. Configure the application
 
 ```bash
-dotnet ef database update --context AppDbContext --project eder-web-api.csproj
+cp Eder.Api/appsettings.Example.json Eder.Api/appsettings.json
 ```
 
-1. Run API:
+Edit `Eder.Api/appsettings.json` with your connection string and JWT secret. This file is gitignored.
+
+Example connection string (matches Docker Compose defaults):
+
+```text
+Host=localhost;Port=5432;Database=eder_db;Username=postgres;Password=postgres_password
+```
+
+### 5. Restore, build, and migrate
 
 ```bash
-dotnet run --project eder-web-api.csproj --launch-profile http
+dotnet restore Eder.slnx
+dotnet build Eder.slnx
+dotnet ef database update --context AppDbContext --project Eder.Infrastructure --startup-project Eder.Api
 ```
 
-API runs at `http://localhost:3000` using the `http` launch profile.
-
-## Run Profiles and URLs
-
-Defined in `Properties/launchSettings.json`:
-
-- `http`
-  - URL: `http://localhost:3000`
-  - Browser auto-launch: disabled
-- `https`
-  - URLs: `https://localhost:7274` and `http://localhost:3000`
-  - Browser auto-launch: enabled
-  - Launch URL: `swagger`
-
-In Development mode, OpenAPI/Swagger is wired in `Program.cs`:
-
-- OpenAPI document: `/openapi/v1.json`
-- Swagger UI (via `UseSwaggerUI`) points to `/openapi/v1.json`
-
-## Database and Migrations
-
-Application DB connection string is configured in `appsettings.json`:
-
-`ConnectionStrings:DefaultConnection=Host=localhost;Port=5432;Database=eder_db;Username=postgres;Password=postgres_password`
-
-Useful commands:
+### 6. Run the API
 
 ```bash
-# Add a new migration
-dotnet ef migrations add <MigrationName> --context AppDbContext --project eder-web-api.csproj
-
-# Apply migrations
-dotnet ef database update --context AppDbContext --project eder-web-api.csproj
+dotnet run --project Eder.Api --launch-profile http
 ```
 
-## Configuration
+The API listens on **http://localhost:3000**.
 
-### appsettings
+---
 
-- `appsettings.json` contains:
-  - `ConnectionStrings:DefaultConnection`
-  - `Logging:LogLevel`
-  - `AllowedHosts`
-- `appsettings.Development.json` overrides development logging behavior.
+## Running the API
 
-### Environment variable overrides
+Launch profiles are defined in `Eder.Api/Properties/launchSettings.json`.
 
-Example override for connection string:
+| Profile | URL | Notes |
+|---|---|---|
+| `http` | `http://localhost:3000` | Default development profile |
+| `https` | `https://localhost:7274` | Also serves HTTP on port 3000; opens Swagger UI |
+
+In **Development** mode:
+
+| Resource | Path |
+|---|---|
+| OpenAPI document | `/openapi/v1.json` |
+| Swagger UI | `/swagger` |
+
+---
+
+## Configuration reference
+
+Settings live in `Eder.Api/appsettings.json` (copy from `appsettings.Example.json`).
+
+| Key | Purpose |
+|---|---|
+| `ConnectionStrings:DefaultConnection` | PostgreSQL connection string |
+| `Jwt:Issuer` | JWT issuer claim |
+| `Jwt:Audience` | JWT audience claim |
+| `Jwt:SecretKey` | Signing key for access tokens |
+| `Jwt:AccessTokenMinutes` | Access token lifetime in minutes |
+
+Override via environment variables:
 
 ```bash
 export ConnectionStrings__DefaultConnection="Host=localhost;Port=5432;Database=eder_db;Username=postgres;Password=postgres_password"
 ```
 
+---
+
+## Database and migrations
+
+Migrations are stored in `Eder.Infrastructure/Persistence/Migrations/`.
+
+```bash
+# Apply all pending migrations
+dotnet ef database update --context AppDbContext --project Eder.Infrastructure --startup-project Eder.Api
+
+# Add a new migration
+dotnet ef migrations add <MigrationName> --context AppDbContext --project Eder.Infrastructure --startup-project Eder.Api
+```
+
+The initial migration seeds default roles: `ADMIN`, `CHAIR_PERSON`, `SECRETARY`, `TREASURER`, and `USER`.
+
+### Core tables
+
+| Table | Purpose |
+|---|---|
+| `user_logins` | ASP.NET Identity users (`ApplicationUser`) |
+| `user_roles` | ASP.NET Identity roles (`ApplicationRole`) |
+| `accounts` | Tenant accounts |
+| `users` | Users linked to an account, role, and login |
+
+---
+
+## Current implementation status
+
+### Done
+
+- Clean-architecture solution at repo root
+- ASP.NET Core Identity with EF Core persistence
+- JWT service registered in DI (`JwtService`)
+- Register DTOs and FluentValidation in `Eder.Application`
+- OpenAPI and Swagger UI in Development
+
+### Not yet implemented
+
+- Business API endpoints and controllers
+- JWT bearer authentication middleware
+- Auth use cases (register/login handlers)
+
+---
+
+## Development guide
+
+Where to add new code:
+
+| Adding... | Put it in... |
+|---|---|
+| New endpoint | `Eder.Api` (controller or minimal API) |
+| Request/response models | `Eder.Application/{Feature}/Dtos/` |
+| Validation rules | `Eder.Application/{Feature}/Validators/` |
+| Business logic | `Eder.Application/{Feature}/` (handlers or services) |
+| Domain entity or rule | `Eder.Domain/` |
+| DB mapping or external service | `Eder.Infrastructure/` |
+
+Register new Application services in `Eder.Application/DependencyInjection.cs`. Register Infrastructure services in `Eder.Infrastructure/DependencyInjection.cs`.
+
+---
+
 ## Tooling
 
-Local .NET tools are declared in `dotnet-tools.json` (includes `csharpier`).
+Local .NET tools are declared in `dotnet-tools.json`:
 
 ```bash
 dotnet tool restore
 dotnet csharpier .
 ```
 
-## Solution Files
+Use `Eder.Api/Eder.Api.http` for REST client requests in VS Code or Rider.
 
-- Primary solution for this repository layout: `eder-management-system.sln`
-- `eder.sln` references older paths (`eder-management-system\\backend\\src\\...`) that are not part of the current backend-only layout
+---
 
-## Known Caveats
+## Troubleshooting
 
-- `docker-compose.local.yml` creates Postgres with `POSTGRES_DB=postgres`, while app config expects `eder_db`.
-  - Either create `eder_db` manually, or change compose/config so both use the same DB name.
-- `eder-web-api.http` currently points to `http://localhost:5170` and `GET /weatherforecast`, which does not match current launch settings and mapped endpoints.
+| Problem | Fix |
+|---|---|
+| Database connection fails | Ensure `eder_db` exists. Compose creates `postgres` by default — see step 3 in Getting started. |
+| `Connection string 'DefaultConnection' not found` | Copy `Eder.Api/appsettings.Example.json` to `Eder.Api/appsettings.json`. |
+| Migration errors | Confirm Postgres is running (`docker compose ps`) and credentials match your connection string. |
+| Swagger not loading | Run with the `https` profile or browse to `/swagger` while `ASPNETCORE_ENVIRONMENT=Development`. |

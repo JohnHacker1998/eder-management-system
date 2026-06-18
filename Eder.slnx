@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Eder.Api/Eder.Api.csproj" />
+  <Project Path="Eder.Application/Eder.Application.csproj" />
+  <Project Path="Eder.Domain/Eder.Domain.csproj" />
+  <Project Path="Eder.Infrastructure/Eder.Infrastructure.csproj" />
+</Solution>
