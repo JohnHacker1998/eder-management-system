@@ -1,6 +1,9 @@
 ﻿using Eder.Infrastructure.Configuration;
 using Eder.Infrastructure.Identity;
 using Eder.Infrastructure.Persistence;
+using Eder.Infrastructure.Repositories;
+using Eder.Domain.IRepositories;
+using Eder.Application.Common;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -33,7 +36,11 @@ public static class DependencyInjection
             .AddDefaultTokenProviders();
 
         services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
-        services.AddScoped<JwtService>();
+        services.AddScoped<ITokenService, JwtService>();
+        services.AddScoped<IUserLoginRepository, UserLoginRepository>();
+        services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+        services.AddScoped<IAccountRepository, AccountRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }

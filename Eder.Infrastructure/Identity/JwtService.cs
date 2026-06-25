@@ -2,13 +2,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Eder.Application.Common;
 using Eder.Infrastructure.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Eder.Infrastructure.Identity;
 
-public class JwtService
+public class JwtService : ITokenService
 {
     private readonly JwtOptions _jwtOptions;
 
@@ -17,7 +18,23 @@ public class JwtService
         _jwtOptions = jwtOptions.Value;
     }
 
-    public string GenerateAccessToken(IEnumerable<Claim> claims)
+    public string GenerateAccessToken(Guid userId)
+    {
+        var claims = new[] { new Claim(ClaimTypes.NameIdentifier, userId.ToString()) };
+
+        return GenerateAccessTokenFromClaims(claims);
+    }
+
+    public string GenerateRefreshToken()
+    {
+        var randomBytes = new byte[64];
+        using var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(randomBytes);
+
+        return Convert.ToBase64String(randomBytes);
+    }
+
+    private string GenerateAccessTokenFromClaims(IEnumerable<Claim> claims)
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SecretKey));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -31,14 +48,5 @@ public class JwtService
         );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
-    }
-
-    public string GenerateRefreshToken()
-    {
-        var randomBytes = new byte[64];
-        using var rng = RandomNumberGenerator.Create();
-        rng.GetBytes(randomBytes);
-
-        return Convert.ToBase64String(randomBytes);
     }
 }

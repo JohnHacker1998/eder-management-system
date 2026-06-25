@@ -10,6 +10,6 @@ public class UserRoleRepository(AppDbContext context) : IUserRoleRepository
 {
     public async Task<UserRole?> GetRoleByName(RoleName roleName)
     {
-        throw new NotImplementedException();
+       return await context.TenantUserRoles.FirstOrDefaultAsync(x => x.Name == roleName);
     }
 }
