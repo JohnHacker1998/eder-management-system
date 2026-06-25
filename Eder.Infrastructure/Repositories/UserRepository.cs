@@ -4,12 +4,12 @@ using Eder.Infrastructure.Persistence;
 
 namespace Eder.Infrastructure.Repositories;
 
-public class AccountRepository(AppDbContext context) : IAccountRepository
+public class UserRepository(AppDbContext context) : IUserRepository
 {
-    public async Task<Account> Create(Account account)
+    public async Task<User> Create(User user)
     {
-        context.Accounts.Add(account);
+        context.TenantUsers.Add(user);
         await context.SaveChangesAsync();
-        return account;
+        return user;
     }
 }

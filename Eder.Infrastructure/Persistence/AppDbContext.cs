@@ -40,9 +40,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
         return string.Concat(
             name.Select(
                 (c, i) =>
-                    i > 0 && char.IsUpper(c)
-                        ? "_" + char.ToLower(c)
-                        : char.ToLower(c).ToString()
+                    i > 0 && char.IsUpper(c) ? "_" + char.ToLower(c) : char.ToLower(c).ToString()
             )
         );
     }
