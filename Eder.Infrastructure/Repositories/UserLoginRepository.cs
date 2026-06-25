@@ -8,14 +8,14 @@ namespace Eder.Infrastructure.Repositories
 {
     public class UserLoginRepository(UserManager<ApplicationUser> userManager,JwtService jwtService) : IUserLoginRepository
     {
-        public async Task<UserLogin> Create(UserLogin userLogin, string password)
+        public async Task<UserLogin> Create(UserLogin userLogin, string password, string refreshToken)
         {
-            var existingUserLogin = userManager.Users.FirstOrDefault(x => x.PhoneNumber == userLogin.PhoneNumber && x.Email == userLogin.Email);
-            if (userLogin == null)
-            {
-                throw new Exception("User already exists");
-            } 
-            var refreshToken = jwtService.GenerateRefreshToken();
+            // var existingUserLogin = userManager.Users.FirstOrDefault(x => x.PhoneNumber == userLogin.PhoneNumber && x.Email == userLogin.Email);
+            // if (userLogin == null)
+            // {
+            //     throw new Exception("User already exists");
+            // } 
+            // var refreshToken = jwtService.GenerateRefreshToken();
             var applicationUser= new ApplicationUser()
             {
                 Id=Guid.NewGuid(),
@@ -24,7 +24,7 @@ namespace Eder.Infrastructure.Repositories
                 PhoneNumber = userLogin.PhoneNumber,
                 FirstName = userLogin.FirstName,
                 LastName = userLogin.LastName,
-                LoginCount = userLogin.LoginCount,
+                LoginCount = 0,
                 RefreshToken = refreshToken
             };
             var user=await userManager.CreateAsync(applicationUser, password);
@@ -37,6 +37,7 @@ namespace Eder.Infrastructure.Repositories
         
         private static UserLogin MapToDomain(ApplicationUser user) => new()
         {
+            Id = user.Id,
             Email = user.Email!,
             UserName = user.UserName!,
             FirstName = user.FirstName,

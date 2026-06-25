@@ -1,24 +1,25 @@
 using Eder.Domain.Entities;
 using Eder.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Eder.Infrastructure.Persistence;
 
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options) { }
 
-    public DbSet<ApplicationUser> UserLogins => Set<ApplicationUser>();
-    public DbSet<ApplicationRole> UserRoles => Set<ApplicationRole>();
+    public DbSet<UserRole> TenantUserRoles => Set<UserRole>();
     public DbSet<Account> Accounts => Set<Account>();
-    public DbSet<User> Users => Set<User>();
+    public DbSet<User> TenantUsers => Set<User>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
         ApplySnakeCase(modelBuilder);
-        base.OnModelCreating(modelBuilder);
     }
 
     private static void ApplySnakeCase(ModelBuilder modelBuilder)
