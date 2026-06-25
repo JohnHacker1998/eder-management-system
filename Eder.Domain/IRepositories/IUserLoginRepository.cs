@@ -3,5 +3,5 @@ namespace Eder.Domain.IRepositories;
 
 public interface IUserLoginRepository
 {
-    public Task<UserLogin> Create(UserLogin userLogin, string password);
+    public Task<UserLogin> Create(UserLogin userLogin, string password,string refreshToken);
 }
