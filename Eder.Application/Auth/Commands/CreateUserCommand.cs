@@ -69,9 +69,9 @@ public class CreateUserCommandHandler(
 
         return new RegisterResponse
         {
-            AccessToken = tokenService.GenerateAccessToken(user.Id),
+            AccessToken = tokenService.GenerateAccessToken(user.Id, role.Name.ToString()),
             RefreshToken = refreshToken,
-            ExpiresIn = string.Empty,
+            ExpiresIn = tokenService.GetAccessTokenExpirySeconds(),
         };
     }
 }

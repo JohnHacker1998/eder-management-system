@@ -2,6 +2,7 @@ namespace Eder.Application.Common;
 
 public interface ITokenService
 {
-    string GenerateAccessToken(Guid userId);
+    string GenerateAccessToken(Guid userId, string roleName);
     string GenerateRefreshToken();
+    int GetAccessTokenExpirySeconds();
 }

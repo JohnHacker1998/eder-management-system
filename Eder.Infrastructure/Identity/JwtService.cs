@@ -18,9 +18,13 @@ public class JwtService : ITokenService
         _jwtOptions = jwtOptions.Value;
     }
 
-    public string GenerateAccessToken(Guid userId)
+    public string GenerateAccessToken(Guid userId, string roleName)
     {
-        var claims = new[] { new Claim(ClaimTypes.NameIdentifier, userId.ToString()) };
+        var claims = new[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+            new Claim(ClaimTypes.Role, roleName),
+        };
 
         return GenerateAccessTokenFromClaims(claims);
     }
@@ -33,6 +37,8 @@ public class JwtService : ITokenService
 
         return Convert.ToBase64String(randomBytes);
     }
+
+    public int GetAccessTokenExpirySeconds() => _jwtOptions.AccessTokenMinutes * 60;
 
     private string GenerateAccessTokenFromClaims(IEnumerable<Claim> claims)
     {
