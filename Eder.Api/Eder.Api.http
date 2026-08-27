@@ -1,4 +1,13 @@
 @Eder.Api_HostAddress = http://localhost:3000
 
 ###
-# No business endpoints mapped yet.
+POST {{Eder.Api_HostAddress}}/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "test@example.com",
+  "phoneNumber": "+251900000000",
+  "password": "Str0ng!Pass"
+}

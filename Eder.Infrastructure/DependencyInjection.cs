@@ -29,8 +29,16 @@ public static class DependencyInjection
         services
             .AddIdentityCore<ApplicationUser>(options =>
             {
-                options.Password.RequireDigit = true;
-                options.Password.RequiredLength = 8;
+                // Password strength is enforced by RegisterRequestValidator (FluentValidation)
+                // via the MediatR ValidationBehavior before any command reaches Identity.
+                // Identity's own policy is intentionally relaxed so it never becomes a second,
+                // independently-drifting definition of "a valid password."
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 1;
+                options.Password.RequiredUniqueChars = 1;
             })
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();

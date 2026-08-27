@@ -2,6 +2,7 @@ using Eder.Application.Auth.Dtos;
 using Eder.Application.Common;
 using Eder.Domain.Entities;
 using Eder.Domain.Enums;
+using Eder.Domain.Exceptions;
 using Eder.Domain.IRepositories;
 using MediatR;
 
@@ -29,11 +30,11 @@ public class CreateUserCommandHandler(
             request.Email
         );
         if (existing is not null)
-            throw new InvalidOperationException("User already exists.");
+            throw new EntityAlreadyExistsException("User", request.Email);
 
         var role = await userRoleRepository.GetRoleByName(RoleName.USER);
         if (role is null)
-            throw new InvalidOperationException("Default role 'USER' is not configured.");
+            throw new EntityNotFoundException("UserRole", RoleName.USER);
 
         var refreshToken = tokenService.GenerateRefreshToken();
 
@@ -54,23 +55,18 @@ public class CreateUserCommandHandler(
         );
 
         var account = await accountRepository.Create(
-            new Account { Name = $"{request.FirstName} {request.LastName}" }
+            Account.Create(request.FirstName, request.LastName)
         );
 
         var user = await userRepository.Create(
-            new User
-            {
-                AccountId = account.Id,
-                UserRoleId = role.Id,
-                UserLoginId = createdLogin.Id,
-            }
+            User.Create(account.Id, role.Id, createdLogin.Id)
         );
 
         return new RegisterResponse
         {
-            AccessToken = tokenService.GenerateAccessToken(user.Id),
+            AccessToken = tokenService.GenerateAccessToken(user.Id, role.Name.ToString()),
             RefreshToken = refreshToken,
-            ExpiresIn = string.Empty,
+            ExpiresIn = tokenService.GetAccessTokenExpirySeconds(),
         };
     }
 }

@@ -17,16 +17,20 @@ flowchart TB
   Api --> Infra
   App --> Domain
   Infra --> Domain
+  Infra --> App
 ```
 
 | Layer | Project | Responsibility |
 |---|---|---|
-| Presentation | `Eder.Api` | HTTP host, OpenAPI/Swagger, DI bootstrap |
+| Presentation | `Eder.Api` | HTTP host, controllers, OpenAPI/Swagger, DI bootstrap |
 | Application | `Eder.Application` | DTOs, validators, use cases |
 | Domain | `Eder.Domain` | Entities, enums, domain interfaces |
 | Infrastructure | `Eder.Infrastructure` | EF Core, Identity, JWT, persistence |
 
-Dependency flow: **Api → Application → Domain** and **Infrastructure → Domain**. The API references Infrastructure only for composition root wiring (`AddInfrastructure()` in `Program.cs`).
+Dependency flow: **Api → Application → Domain** and **Infrastructure → Domain**. Infrastructure
+also references Application to implement its `ITokenService` port (`JwtService`). The API
+references Infrastructure both for composition root wiring (`AddInfrastructure()` in
+`Program.cs`) and for JWT bearer authentication configuration.
 
 ---
 
@@ -58,7 +62,7 @@ Dependency flow: **Api → Application → Domain** and **Infrastructure → Dom
 - ASP.NET Core Identity
 - FluentValidation
 - Microsoft OpenAPI + Swashbuckle UI
-- JWT Bearer (package referenced; middleware not wired yet)
+- JWT Bearer authentication middleware
 
 ---
 
@@ -66,10 +70,11 @@ Dependency flow: **Api → Application → Domain** and **Infrastructure → Dom
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
 - [Docker](https://www.docker.com/) (optional, for local Postgres and Redis)
-- [dotnet EF Core tools](https://learn.microsoft.com/en-us/ef/core/cli/dotnet) (for migrations)
+
+`dotnet-ef` is declared in `dotnet-tools.json` as a local tool — no global install needed:
 
 ```bash
-dotnet tool install --global dotnet-ef
+dotnet tool restore
 ```
 
 Redis is included in `docker-compose.local.yml` but is not used by the application yet.
@@ -198,17 +203,23 @@ The initial migration seeds default roles: `ADMIN`, `CHAIR_PERSON`, `SECRETARY`,
 
 ### Done
 
-- Clean-architecture solution at repo root
+- Clean-architecture solution at repo root, with an architecture test suite
+  (`Eder.ArchitectureTests`) enforcing layer boundaries
 - ASP.NET Core Identity with EF Core persistence
-- JWT service registered in DI (`JwtService`)
+- JWT service registered in DI (`JwtService`), issuing role-bearing access tokens
+- JWT bearer authentication and authorization middleware
+- Global exception handling translating domain/identity errors to `ProblemDetails`
+- MediatR pipeline behavior running FluentValidation before handlers execute
 - Register DTOs and FluentValidation in `Eder.Application`
+- `POST /auth/register` via `AuthController`
+- Domain invariants enforced on `User`/`Account` via factory methods
 - OpenAPI and Swagger UI in Development
 
 ### Not yet implemented
 
-- Business API endpoints and controllers
-- JWT bearer authentication middleware
-- Auth use cases (register/login handlers)
+- Login use case and endpoint
+- Refresh-token exchange endpoint
+- Domain invariants on `UserLogin`/`UserRole` (currently still plain models)
 
 ---
 
