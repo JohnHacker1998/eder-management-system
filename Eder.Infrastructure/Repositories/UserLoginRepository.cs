@@ -1,4 +1,5 @@
 using Eder.Domain.Entities;
+using Eder.Domain.Exceptions;
 using Eder.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Eder.Domain.IRepositories;
@@ -7,46 +8,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Eder.Infrastructure.Repositories
 {
-    public class UserLoginRepository(UserManager<ApplicationUser> userManager,JwtService jwtService) : IUserLoginRepository
+    public class UserLoginRepository(UserManager<ApplicationUser> userManager) : IUserLoginRepository
     {
         public async Task<UserLogin?> GetUserByPhoneNumberAndEmail(string phoneNumber, string email)
         {
             var userLoginData=await userManager.Users.FirstOrDefaultAsync(x =>
                 x.PhoneNumber == phoneNumber && x.Email == email);
-            return userLoginData != null ? MapToDomain(userLoginData):null;
+            return userLoginData != null ? ApplicationUserMapper.ToDomain(userLoginData):null;
         }
-        
+
         public async Task<UserLogin> Create(UserLogin userLogin, string password, string refreshToken)
         {
-            var applicationUser= new ApplicationUser()
+            var applicationUser = ApplicationUserMapper.ToApplicationUser(userLogin, refreshToken);
+            var result=await userManager.CreateAsync(applicationUser, password);
+            if (!result.Succeeded)
             {
-                Id=Guid.NewGuid(),
-                UserName = userLogin.UserName,
-                Email = userLogin.Email,
-                PhoneNumber = userLogin.PhoneNumber,
-                FirstName = userLogin.FirstName,
-                LastName = userLogin.LastName,
-                LoginCount = 0,
-                RefreshToken = refreshToken
-            };
-            var user=await userManager.CreateAsync(applicationUser, password);
-            if (!user.Succeeded)
-            {
-                throw new Exception("Failed to create user");
+                throw new IdentityOperationException(
+                    "Failed to create user.",
+                    result.Errors.Select(e => e.Description)
+                );
             }
-            return MapToDomain(applicationUser);
+            return ApplicationUserMapper.ToDomain(applicationUser);
         }
-        
-        private static UserLogin MapToDomain(ApplicationUser user) => new()
-        {
-            Id = user.Id,
-            Email = user.Email!,
-            UserName = user.UserName!,
-            FirstName = user.FirstName,
-            LastName = user.LastName,
-            PhoneNumber = user.PhoneNumber,
-            LoginCount = user.LoginCount,
-            RefreshToken = user.RefreshToken,
-        };
     }
 }
