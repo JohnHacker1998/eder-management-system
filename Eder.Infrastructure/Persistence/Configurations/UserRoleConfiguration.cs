@@ -12,9 +12,5 @@ public class UserRoleConfiguration : IEntityTypeConfiguration<UserRole>
 
         builder.Property(x => x.Name).HasConversion<string>().HasColumnName("name");
         builder.Property(x => x.Type).HasColumnName("type");
-
-        builder.Ignore(x => x.CreatedAt);
-        builder.Ignore(x => x.UpdatedAt);
-        builder.Ignore(x => x.DeletedAt);
     }
 }
