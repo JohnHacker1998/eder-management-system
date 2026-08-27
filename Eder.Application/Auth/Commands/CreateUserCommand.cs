@@ -55,16 +55,11 @@ public class CreateUserCommandHandler(
         );
 
         var account = await accountRepository.Create(
-            new Account { Name = $"{request.FirstName} {request.LastName}" }
+            Account.Create(request.FirstName, request.LastName)
         );
 
         var user = await userRepository.Create(
-            new User
-            {
-                AccountId = account.Id,
-                UserRoleId = role.Id,
-                UserLoginId = createdLogin.Id,
-            }
+            User.Create(account.Id, role.Id, createdLogin.Id)
         );
 
         return new RegisterResponse
